@@ -5,3 +5,4 @@ export default function Home() {
     <div className={css({ fontSize: "2xl", fontWeight: 'bold' })}>Hello 🐼!</div>
   )
 }
+
