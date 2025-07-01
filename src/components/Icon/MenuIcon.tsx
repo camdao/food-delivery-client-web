@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MenuIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
+const MenuIcon: React.FC<React.SVGProps<SVGSVGElement>> = () => {
   return (
     <svg
       width="18"
@@ -8,7 +8,6 @@ const MenuIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
       viewBox="0 0 18 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props} // Cho phép truyền className, style, ...
     >
       <path
         d="M1 13H11"
