@@ -2,7 +2,7 @@ import Icon from '@/components/Icon/index';
 import { type Meta, type StoryObj } from '@storybook/nextjs-vite';
 
 const meta: Meta<typeof Icon> = {
-  title: 'Component/Icon',
+  title: 'Components/Icon',
   component: Icon,
 };
 

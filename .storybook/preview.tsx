@@ -1,3 +1,5 @@
+import React from "react";
+import "../styled-system/styles.css"; 
 import type { Preview } from '@storybook/nextjs-vite';
 
 const preview: Preview = {
@@ -16,6 +18,13 @@ const preview: Preview = {
       test: 'todo',
     },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ minWidth: '375px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default preview;
