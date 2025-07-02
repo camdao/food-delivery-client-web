@@ -2,34 +2,11 @@ import React from 'react';
 
 const CardIcon: React.FC<React.SVGProps<SVGSVGElement>> = () => {
   return (
-    <svg
-      width="20"
-      height="22"
-      viewBox="0 0 20 22"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 0.999756L1 4.99976V18.9998C1 19.5302 1.21071 20.0389 1.58579 20.414C1.96086 20.789 2.46957 20.9998 3 20.9998H17C17.5304 20.9998 18.0391 20.789 18.4142 20.414C18.7893 20.0389 19 19.5302 19 18.9998V4.99976L16 0.999756H4Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M1 4.99976H19"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M14 8.99976C14 10.0606 13.5786 11.078 12.8284 11.8282C12.0783 12.5783 11.0609 12.9998 10 12.9998C8.93913 12.9998 7.92172 12.5783 7.17157 11.8282C6.42143 11.078 6 10.0606 6 8.99976"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="22.5" cy="22.5" r="22.5" fill="#181C2E"/>
+    <path d="M17 12.9998L14 16.9998V30.9998C14 31.5302 14.2107 32.0389 14.5858 32.414C14.9609 32.789 15.4696 32.9998 16 32.9998H30C30.5304 32.9998 31.0391 32.789 31.4142 32.414C31.7893 32.0389 32 31.5302 32 30.9998V16.9998L29 12.9998H17Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 16.9998H32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M27 20.9998C27 22.0606 26.5786 23.078 25.8284 23.8282C25.0783 24.5783 24.0609 24.9998 23 24.9998C21.9391 24.9998 20.9217 24.5783 20.1716 23.8282C19.4214 23.078 19 22.0606 19 20.9998" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   );
 };

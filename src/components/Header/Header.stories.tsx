@@ -1,11 +1,11 @@
-import { type StoryObj } from "@storybook/nextjs-vite";
+import { StoryObj } from "@storybook/nextjs-vite";
+import Header from "./Header";
 
-import Header from "./header";
 
 
   
 const meta = {
-    title: 'Component/Header',
+    title: 'Components/Header',
     component: Header,
 };
  
@@ -14,4 +14,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
  
 export const Default: Story = {
+    args:{
+        title: 'Home',
+        iconNameLeft:'menu',
+        iconNameRight:'card'
+    }
 };
