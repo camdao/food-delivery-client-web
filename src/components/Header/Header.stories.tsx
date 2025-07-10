@@ -1,9 +1,7 @@
-import { StoryObj } from "@storybook/nextjs-vite";
+import { type StoryObj } from "@storybook/nextjs-vite";
+
 import Header from "./Header";
 
-
-
-  
 const meta = {
     title: 'Components/Header',
     component: Header,
