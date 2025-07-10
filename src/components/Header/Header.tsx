@@ -1,13 +1,13 @@
 import { css } from "../../../styled-system/css";
-import Icon, { IconComponentMap } from "../Icon";
+import Icon, { type IconComponentMap } from "../Icon";
 
-interface headerProps{
-    title:string;
+interface HeaderProps {
+    title: string;
     iconNameLeft: keyof typeof IconComponentMap;
     iconNameRight: keyof typeof IconComponentMap;
 };
 
-function Header(props : headerProps) {
+function Header(props : HeaderProps) {
     return(
         <header className={wrapperCss}>
             <Icon name={props.iconNameLeft}/>
@@ -25,17 +25,3 @@ const wrapperCss = css({
   maxWidth: '327px',
   gap:'10px'
 });
-
-const titleLabelCss = css({
-    fontSize: '12px',
-    color: '#FC6E2A',
-    fontWeight: 'bold',
-    fontFamily: 'Sen',
-});
-  
-const titleValueCss = css({
-    fontSize: '14px',
-    color: '#676767',
-    fontFamily: 'Sen',
-});
-  

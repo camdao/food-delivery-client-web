@@ -1,11 +1,14 @@
 import { type SVGProps } from "react";
 
 import CardIcon from "./CardIcon";
+import CloseIcon from "./CloseIcon";
 import MenuIcon from "./MenuIcon";
 
 export const IconComponentMap = {
     'menu': MenuIcon,
-    'card': CardIcon
+    'card': CardIcon,
+    'close': CloseIcon
+
 }
 interface Props extends IconComponentProps{
     name: keyof typeof IconComponentMap;
