@@ -13,12 +13,12 @@ export const IconComponentMap = {
 interface Props extends IconComponentProps{
     name: keyof typeof IconComponentMap;
 }
-interface IconComponentProps extends SVGProps<SVGSVGElement> {
+export interface IconComponentProps extends SVGProps<SVGSVGElement> {
     onClick?: () => void;
 }
   
-export default function Icon({name}: Props) {
+export default function Icon({ name, ...props }: Props) {
     const IconComponent = IconComponentMap[name];
-
-    return <IconComponent/>;
+  
+    return <IconComponent {...props} />;
 }

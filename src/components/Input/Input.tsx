@@ -11,13 +11,8 @@ type InputProps = {
 };
 
   
-function Input({
-    onChange,
-    value, 
-    placeholder,
-    ...props
-  }: InputProps){
-  
+function Input({onChange,value, placeholder,...props}: InputProps){
+
   const isDeleteButtonVisible = value && value.length > 0;
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -29,16 +24,22 @@ function Input({
     onChange?.(inputValue);
   };
 
+  const onDelete = () => {
+    onChange?.('');
+  };
+
   return (
     <div className={inputWrapperCss}>
       <input
         className={inputCss}
+        required
+        autoComplete="off"
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
       />
       {isDeleteButtonVisible && (
-        <Icon name='close' />
+        <Icon name='close' className={iconCss} onClick={onDelete} />
       )}
     </div>
   );
@@ -60,5 +61,7 @@ const inputCss = css({
   backgroundColor: '#F6F6F6',
 });
 
-
+const iconCss = css({
+  cursor: 'pointer',
+});
 export default Input;
