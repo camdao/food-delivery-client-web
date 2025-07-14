@@ -1,3 +1,4 @@
+import { colorList, semanticColorList } from "@/styles/color";
 import { defineConfig } from "@pandacss/dev";
 
 export default defineConfig({
@@ -15,7 +16,13 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      tokens: {
+        ...colorList
+      },
+      semanticTokens: semanticColorList,
+
+    },
   },
 
   "jsxFramework": "react",
