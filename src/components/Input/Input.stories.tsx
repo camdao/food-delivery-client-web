@@ -15,6 +15,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
       value: 'test',
+      name: 'EMAIL'
     },
     render: (args) => {
       const [value, setValue] = useState(args.value);
@@ -25,6 +26,7 @@ export const Default: Story = {
           value={value}
           onChange={setValue}
           bgColor="#F0F5FA"
+          
         />
       );
     },
