@@ -22,13 +22,11 @@ const buttonStyle = cva({
         size: {
             large: {
               width: '100%',
-              maxWidth: '327px',
               margin: '0 auto',
             },
             small: {
               width: '100%',
               maxWidth: '139px',
-
             }
           }
           

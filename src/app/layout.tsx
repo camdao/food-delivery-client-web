@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div className={css(containerCss)}>{children}</div>
+        <div className={css(containerCss)}>{children}</div>
       </body>
     </html>
   )
@@ -28,7 +28,7 @@ export default function RootLayout({
 
 
 const containerCss = {
-  maxWidth: '475px',
+  maxWidth: '375px',
   margin: '0 auto',
   minHeight: '100vh',
 };
