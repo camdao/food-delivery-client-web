@@ -24,6 +24,7 @@ export const Default: Story = {
           {...args}
           value={value}
           onChange={setValue}
+          bgColor="#F0F5FA"
         />
       );
     },
