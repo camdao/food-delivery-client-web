@@ -1,6 +1,6 @@
 import { type ChangeEvent} from 'react';
 
-import { css } from '../../../styled-system/css';
+import { css, cx } from '../../../styled-system/css';
 import Icon from '../Icon';
 
 type InputProps = {
@@ -8,10 +8,12 @@ type InputProps = {
   value?: string;
   onChange?:(value: string) => void;
   maxLength?:number;
+  bgColor?: string;
+  name:string;
 };
 
   
-function Input({onChange,value, placeholder,...props}: InputProps){
+function Input({onChange,value, placeholder,bgColor,...props}: InputProps){
 
   const isDeleteButtonVisible = value && value.length > 0;
 
@@ -29,39 +31,59 @@ function Input({onChange,value, placeholder,...props}: InputProps){
   };
 
   return (
-    <div className={inputWrapperCss}>
-      <input
-        className={inputCss}
-        required
-        autoComplete="off"
-        value={value}
-        onChange={handleChange}
-        placeholder={placeholder}
-      />
-      {isDeleteButtonVisible && (
-        <Icon name='close' className={iconCss} onClick={onDelete} />
-      )}
-    </div>
+    <>
+      <label className={subTitleCss}>
+        {props.name}
+      </label>
+      <div className={cx(
+        inputWrapperCss,
+        css({ backgroundColor: bgColor })
+      )}>
+        <input
+          className={cx(
+            inputCss,
+            css({ backgroundColor: bgColor }) 
+          )}
+          required
+          autoComplete="off"
+          value={value}
+          onChange={handleChange}
+          placeholder={placeholder}
+        />
+        {isDeleteButtonVisible && (
+          <Icon name='close' className={iconCss} onClick={onDelete} />
+        )}
+      </div>
+    </>
   );
 }
 
 const inputWrapperCss = css({
   display: 'flex',
   alignItems:'center',
-  backgroundColor: '#F6F6F6',
   width: '100%',
   justifyContent: 'space-between',
-  padding: '12px 7px 14px',
+  padding: '12px 19px 14px',
   borderRadius: '10px',
+  
 })
 
 const inputCss = css({
   flex: 1,
   _focus: { outline: 'none' },
-  backgroundColor: '#F6F6F6',
+  fontSize:'14px',
 });
 
 const iconCss = css({
   cursor: 'pointer',
+  paddingLeft: '3px',
 });
+
+const subTitleCss = css({
+  fontSize:'13px',
+  marginBottom: '5px',
+  display: 'block',
+  paddingLeft:'1px'
+});
+
 export default Input;
