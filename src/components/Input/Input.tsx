@@ -65,13 +65,13 @@ const inputWrapperCss = css({
   justifyContent: 'space-between',
   padding: '12px 19px 14px',
   borderRadius: '10px',
-  
 })
 
 const inputCss = css({
   flex: 1,
   _focus: { outline: 'none' },
   fontSize:'14px',
+  height:'36px'
 });
 
 const iconCss = css({

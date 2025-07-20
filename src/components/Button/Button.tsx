@@ -23,6 +23,7 @@ const buttonStyle = cva({
             large: {
               width: '100%',
               margin: '0 auto',
+              height:'62px'
             },
             small: {
               width: '100%',
