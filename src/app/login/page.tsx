@@ -13,12 +13,12 @@ export default function LoginPage() {
     return(
         <>
             <div className={loginHeader}>
-                <h2>Log In</h2>
-                <p>Please sign in to your existing account</p>
+                <h2 className={headerLogin}>Log In</h2>
+                <p className={describeLogin}>Please sign in to your existing account</p>
             </div>
             <div className={loginCard}>
-                <Input name ={"Email"} bgColor={"#F0F5FA"} value={value} onChange={setValue} placeholder="example@gmail.com"/>
-                <Input name ={"Password"} bgColor={"#F0F5FA"} value={value} onChange={setValue} placeholder="**********"/>
+                <Input name ={"EMAIL"} bgColor={"#F0F5FA"} value={value} onChange={setValue} placeholder="example@gmail.com"/>
+                <Input name ={"PASSWORD"} bgColor={"#F0F5FA"} value={value} onChange={setValue} placeholder="**********"/>
                 <div className={loginFooter}>
                     <label className={rememberMe}>
                         <input type="checkbox" color="#7E8A97"/>
@@ -28,11 +28,13 @@ export default function LoginPage() {
                         Forgot Password
                     </button>
                 </div>
-                <Button color={'orange'} size={'large'}>LOG IN</Button>
+                <div className={buttonCss}>
+                    <Button color={'orange'} size={'large'}>LOG IN</Button>
+                </div>
                 <div className={signUpSection}>
                     <div>
                         <span className={signUpText}>Don’t have an account?</span>
-                        <span className={signUpLink}>Sign Up</span>
+                        <span className={signUpLink}>SIGN UP</span>
                     </div>
                     <div className={orDivider}>Or</div>
                     <div className={containerIcon}>
@@ -46,39 +48,56 @@ export default function LoginPage() {
         </>
     )
 }
+const buttonCss = css({
+    margin:'15px 0'
+})
+const describeLogin = css({
+    fontSize:'16px',
+})
 const containerIcon = css({
     display:'flex',
-    gap:'10px',
+    gap:'20px',
     justifyContent: 'center',
 })
-
+const headerLogin = css({
+  fontSize:'30px',
+  fontWeight: 'bold'
+})
 const signUpSection = css({
     paddingBottom:'10px',
     textAlign:'center',
     display:'flex',
     flexDirection:'column',
-    gap:'15px'
+    gap:'15px',
 })
 
 const signUpText =css({
-    color:'#646982'
+    color:'#646982',
+    fontFamily:'sen',
+    fontSize:'14px',
 })
 const signUpLink =css({
     paddingLeft:'5px',
-    color:'orange.orange400'
+    color:'orange.orange400',
+    fontFamily:'sen',
+    fontSize:'14px',
 })
 const orDivider =css({
     color:'#646982'
 })
 const forgotPassword = css({
-    color:'orange.orange400'
+    color:'orange.orange400',
+    fontFamily:'sen',
+    fontSize:'14px',
 })
 const rememberMe = css({
     display: 'flex',
     alignItems: 'center',
     gap: '6px',
     cursor: 'pointer',
-    color:'#7E8A97'
+    color:'#7E8A97',
+    fontFamily:'sen',
+    fontSize:'13px',
 })
 const loginFooter = css({
     display:'flex',
@@ -107,5 +126,6 @@ const loginHeader = css({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center', 
-    padding: '0 20px'
+    padding: '0 20px',
+    fontFamily:'sen'
 })

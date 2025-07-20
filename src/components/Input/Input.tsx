@@ -31,7 +31,7 @@ function Input({onChange,value, placeholder,bgColor,...props}: InputProps){
   };
 
   return (
-    <>
+    <div>
       <label className={subTitleCss}>
         {props.name}
       </label>
@@ -54,7 +54,7 @@ function Input({onChange,value, placeholder,bgColor,...props}: InputProps){
           <Icon name='close' className={iconCss} onClick={onDelete} />
         )}
       </div>
-    </>
+    </div>
   );
 }
 
@@ -71,7 +71,8 @@ const inputCss = css({
   flex: 1,
   _focus: { outline: 'none' },
   fontSize:'14px',
-  height:'36px'
+  height:'36px',
+  fontFamily:'sen'
 });
 
 const iconCss = css({
@@ -81,9 +82,10 @@ const iconCss = css({
 
 const subTitleCss = css({
   fontSize:'13px',
-  marginBottom: '5px',
+  marginBottom: '4px',
   display: 'block',
-  paddingLeft:'1px'
+  paddingLeft:'1px',
+  fontFamily:'sen'
 });
 
 export default Input;
