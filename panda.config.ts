@@ -18,7 +18,10 @@ export default defineConfig({
   theme: {
     extend: {
       tokens: {
-        ...colorList
+        ...colorList,
+        fonts: {
+          sen: { value: 'var(--font-sen)' },
+        }
       },
       semanticTokens: semanticColorList,
 
