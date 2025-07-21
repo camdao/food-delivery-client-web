@@ -6,6 +6,7 @@ const buttonStyle = cva({
         display: 'block',
         borderRadius: '12px',
         height:'38px',
+        cursor: 'pointer',
     },
     variants:{
         color:{

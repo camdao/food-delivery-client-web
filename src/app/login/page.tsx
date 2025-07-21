@@ -8,7 +8,12 @@ import Input from "@/components/Input/Input";
 import { css } from "../../../styled-system/css";
 
 export default function LoginPage() {
-    const [value, setValue] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const loginButton = () => {
+        alert("dangnhap")
+    };
 
     return(
         <>
@@ -17,8 +22,8 @@ export default function LoginPage() {
                 <p className={describeLogin}>Please sign in to your existing account</p>
             </div>
             <div className={loginCard}>
-                <Input name ={"EMAIL"} bgColor={"#F0F5FA"} value={value} onChange={setValue} placeholder="example@gmail.com"/>
-                <Input name ={"PASSWORD"} bgColor={"#F0F5FA"} value={value} onChange={setValue} placeholder="**********"/>
+                <Input name ={"EMAIL"} bgColor={"#F0F5FA"} value={email} onChange={setEmail} placeholder="example@gmail.com"/>
+                <Input name ={"PASSWORD"} bgColor={"#F0F5FA"} value={password} onChange={setPassword} placeholder="**********"/>
                 <div className={loginFooter}>
                     <label className={rememberMe}>
                         <input type="checkbox" color="#7E8A97"/>
@@ -29,7 +34,7 @@ export default function LoginPage() {
                     </button>
                 </div>
                 <div className={buttonCss}>
-                    <Button color={'orange'} size={'large'}>LOG IN</Button>
+                    <Button color={'orange'} size={'large'} onClick={loginButton}>LOG IN</Button>
                 </div>
                 <div className={signUpSection}>
                     <div>
@@ -38,9 +43,18 @@ export default function LoginPage() {
                     </div>
                     <div className={orDivider}>Or</div>
                     <div className={containerIcon}>
-                        <Icon name='facebook'/>
-                        <Icon name='twitter'/>
-                        <Icon name='apple'/>
+                        <Icon 
+                            name="facebook" 
+                            className={css({ cursor: 'pointer' })} 
+                        />
+                        <Icon 
+                            name="twitter" 
+                            className={css({ cursor: 'pointer' })} 
+                        />
+                        <Icon 
+                            name="apple" 
+                            className={css({ cursor: 'pointer' })} 
+                        />
                     </div>
                 </div>
                 
@@ -81,6 +95,7 @@ const signUpLink =css({
     color:'orange.orange400',
     fontFamily:'sen',
     fontSize:'14px',
+    cursor: 'pointer',
 })
 const orDivider =css({
     color:'#646982'
@@ -89,6 +104,7 @@ const forgotPassword = css({
     color:'orange.orange400',
     fontFamily:'sen',
     fontSize:'14px',
+    cursor: 'pointer',
 })
 const rememberMe = css({
     display: 'flex',
