@@ -32,3 +32,25 @@ export const Default: Story = {
     },
   };
   
+
+  export const Password: Story = {
+    args: {
+      value: 'test',
+      name: 'PASSWORD',
+      type: 'password'
+    },
+    render: (args) => {
+      const [value, setValue] = useState(args.value);
+  
+      return (
+        <Input
+          {...args}
+          value={value}
+          onChange={setValue}
+          bgColor="#F0F5FA"
+          
+        />
+      );
+    },
+  };
+  
