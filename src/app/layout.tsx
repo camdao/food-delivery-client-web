@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Sen } from '@/styles/font'
 
+import { css } from '../../styled-system/css'
+
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,8 +19,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-  <html lang="en" className={`${Sen.variable}`}>
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${Sen.variable}`}>
+      <body className={inter.className}>
+        <div className={css(containerCss)}>{children}</div>
+      </body>
     </html>
   )
 }
+
+
+const containerCss = {
+  maxWidth: '375px',
+  margin: '0 auto',
+  minHeight: '100vh',
+};
