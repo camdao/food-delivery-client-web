@@ -23,7 +23,7 @@ export default function LoginPage() {
             </div>
             <div className={loginCard}>
                 <Input name ={"EMAIL"} bgColor={"#F0F5FA"} value={email} onChange={setEmail} placeholder="example@gmail.com"/>
-                <Input name ={"PASSWORD"} bgColor={"#F0F5FA"} value={password} onChange={setPassword} placeholder="**********"/>
+                <Input type = 'password' name ={"PASSWORD"} bgColor={"#F0F5FA"} value={password} onChange={setPassword} placeholder="**********"/>
                 <div className={loginFooter}>
                     <label className={rememberMe}>
                         <input type="checkbox" color="#7E8A97"/>
