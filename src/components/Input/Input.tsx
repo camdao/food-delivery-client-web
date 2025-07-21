@@ -1,4 +1,4 @@
-import { type ChangeEvent} from 'react';
+import { type ChangeEvent,useState} from 'react';
 
 import { css, cx } from '../../../styled-system/css';
 import Icon from '../Icon';
@@ -10,10 +10,14 @@ type InputProps = {
   maxLength?:number;
   bgColor?: string;
   name:string;
+  type?: 'text' | 'password';
 };
 
   
-function Input({onChange,value, placeholder,bgColor,...props}: InputProps){
+function Input({onChange,value, placeholder,bgColor,type = 'text',...props}: InputProps){
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePassword = () => setShowPassword((prev) => !prev);
 
   const isDeleteButtonVisible = value && value.length > 0;
 
@@ -40,6 +44,7 @@ function Input({onChange,value, placeholder,bgColor,...props}: InputProps){
         css({ backgroundColor: bgColor })
       )}>
         <input
+            type={type === 'password' ? (showPassword ? 'text' : 'password') : 'text'}
           className={cx(
             inputCss,
             css({ backgroundColor: bgColor }) 
@@ -50,8 +55,15 @@ function Input({onChange,value, placeholder,bgColor,...props}: InputProps){
           onChange={handleChange}
           placeholder={placeholder}
         />
-        {isDeleteButtonVisible && (
+        {isDeleteButtonVisible && type === 'text'&& (
           <Icon name='close' className={iconCss} onClick={onDelete} />
+        )}
+        { type === 'password'&& (
+          <Icon
+            name='hidden' 
+            className={iconCss}
+            onClick={togglePassword}
+          />
         )}
       </div>
     </div>
