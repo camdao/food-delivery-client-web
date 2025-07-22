@@ -13,44 +13,23 @@ export default meta;
 type Story = StoryObj<typeof meta>;
  
 export const Default: Story = {
-    args: {
-      value: 'test',
-      name: 'EMAIL'
-    },
-    render: (args) => {
-      const [value, setValue] = useState(args.value);
-  
-      return (
-        <Input
-          {...args}
-          value={value}
-          onChange={setValue}
-          bgColor="#F0F5FA"
-          
-        />
-      );
-    },
-  };
-  
+  args: {
+    value: 'test',
+    name: 'EMAIL',
+    iconName:'close',
+    headerType:'icon',
+    bgColor: "#F0F5FA"
+  },
+  render: (args) => {
+    const [value, setValue] = useState(args.value);
 
-  export const Password: Story = {
-    args: {
-      value: 'test',
-      name: 'PASSWORD',
-      type: 'password'
-    },
-    render: (args) => {
-      const [value, setValue] = useState(args.value);
-  
-      return (
-        <Input
-          {...args}
-          value={value}
-          onChange={setValue}
-          bgColor="#F0F5FA"
-          
-        />
-      );
-    },
-  };
+    return (
+      <Input
+        {...args}
+        value={value}
+        onChange={setValue}
+      />
+    );
+  },
+};
   
