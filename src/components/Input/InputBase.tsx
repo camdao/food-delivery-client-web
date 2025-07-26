@@ -28,7 +28,7 @@ function InputBase({onChange,value, placeholder,bgColor,name,type = 'text',leftI
         inputWrapperCss,
         css({ backgroundColor: bgColor })
         )}>
-            {leftIcon && <div>{leftIcon}</div>}
+            {leftIcon && leftIcon}
             <input
                 type={type}
             className={cx(

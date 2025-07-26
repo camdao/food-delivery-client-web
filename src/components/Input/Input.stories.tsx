@@ -16,7 +16,6 @@ export const Icon: Story = {
   args: {
     value: 'test',
     name: 'EMAIL',
-    iconName:'close',
     headerType:'icon',
     bgColor: "#F0F5FA"
   },
@@ -39,6 +38,25 @@ export const Password: Story = {
     name: 'PASSWORD',
     headerType:'password',
     bgColor: "#F0F5FA"
+  },
+  render: (args) => {
+    const [value, setValue] = useState(args.value);
+
+    return (
+      <Input
+        {...args}
+        value={value}
+        onChange={setValue}
+      />
+    );
+  },
+};
+  
+export const Search: Story = {
+  args: {
+    value: 'test',
+    headerType:'search',
+    placeholder:'Search dishes, restaurants'
   },
   render: (args) => {
     const [value, setValue] = useState(args.value);

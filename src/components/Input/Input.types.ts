@@ -12,16 +12,22 @@ export interface InputProps{
     type?: string;
     leftIcon?: ReactNode;
     rightIcon?: ReactNode;
-    headerType?: 'icon'|'password';
+    headerType?: 'icon'|'password'|'search';
 };
 
 export interface IconInputProps extends InputProps {
     headerType: 'icon';
-    iconName: keyof typeof IconComponentMap;
+    iconName?: keyof typeof IconComponentMap;
 };
 
 export interface PasswordInputProps extends InputProps {
     headerType: 'password';
 };
 
-export type HeaderType = IconInputProps | PasswordInputProps;
+export interface SearchInputProps extends InputProps {
+    headerType: 'search';
+    iconName?: keyof typeof IconComponentMap;
+};
+
+
+export type HeaderType = IconInputProps | PasswordInputProps|SearchInputProps;
