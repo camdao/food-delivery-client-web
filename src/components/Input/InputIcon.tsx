@@ -1,11 +1,8 @@
 import { css } from "../../../styled-system/css";
-import Icon, { type IconComponentMap } from "../Icon";
-import InputBase, { type InputProps } from "./InputBase";
+import Icon from "../Icon";
+import { type IconInputProps } from "./Input.types";
+import InputBase from "./InputBase";
 
-export interface IconInputProps extends InputProps {
-    iconName: keyof typeof IconComponentMap;
-    onChange?:(value: string) => void;
-};
 
   
 function InputIcon({ iconName = 'close', ...props }: IconInputProps) {

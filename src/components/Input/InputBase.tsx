@@ -1,19 +1,9 @@
-import {type ChangeEvent, type ReactNode} from 'react';
+import {type ChangeEvent} from 'react';
 
 import { css, cx } from '../../../styled-system/css';
+import { type InputProps } from './Input.types';
 
-export interface InputProps{
-  placeholder?: string;
-  value?: string;
-  onChange?:(value: string) => void;
-  maxLength?:number;
-  bgColor?: string;
-  name?:string;
-  type?: string;
-  leftIcon?: ReactNode;
-  rightIcon?: ReactNode;
-  headerType?: 'icon';
-};
+
 
   
 function InputBase({onChange,value, placeholder,bgColor,name,type = 'text',leftIcon,rightIcon,...props}: InputProps){

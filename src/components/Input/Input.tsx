@@ -1,6 +1,5 @@
-import InputIcon, { type IconInputProps } from "./InputIcon";
-
-export type HeaderType = IconInputProps;
+import { type HeaderType } from "./Input.types";
+import InputIcon from "./InputIcon";
 
   
 function Input({...props}: HeaderType){
