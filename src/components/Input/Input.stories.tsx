@@ -12,12 +12,32 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
  
-export const Default: Story = {
+export const Icon: Story = {
   args: {
     value: 'test',
     name: 'EMAIL',
     iconName:'close',
     headerType:'icon',
+    bgColor: "#F0F5FA"
+  },
+  render: (args) => {
+    const [value, setValue] = useState(args.value);
+
+    return (
+      <Input
+        {...args}
+        value={value}
+        onChange={setValue}
+      />
+    );
+  },
+};
+  
+export const Password: Story = {
+  args: {
+    value: 'test',
+    name: 'PASSWORD',
+    headerType:'password',
     bgColor: "#F0F5FA"
   },
   render: (args) => {

@@ -1,5 +1,6 @@
 import { type HeaderType } from "./Input.types";
 import InputIcon from "./InputIcon";
+import InputPassword from "./InputPassword";
 
   
 function Input({...props}: HeaderType){
@@ -7,6 +8,10 @@ function Input({...props}: HeaderType){
     case 'icon':
       return (
         <InputIcon {...props}/>
+      );
+    case 'password':
+      return (
+        <InputPassword {...props}/>
       );
   }
 }

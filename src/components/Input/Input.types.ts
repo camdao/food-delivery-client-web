@@ -12,12 +12,16 @@ export interface InputProps{
     type?: string;
     leftIcon?: ReactNode;
     rightIcon?: ReactNode;
-    headerType?: 'icon';
+    headerType?: 'icon'|'password';
 };
 
 export interface IconInputProps extends InputProps {
+    headerType: 'icon';
     iconName: keyof typeof IconComponentMap;
 };
 
+export interface PasswordInputProps extends InputProps {
+    headerType: 'password';
+};
 
-export type HeaderType = IconInputProps;
+export type HeaderType = IconInputProps | PasswordInputProps;
