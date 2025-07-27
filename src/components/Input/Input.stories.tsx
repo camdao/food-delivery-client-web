@@ -12,45 +12,66 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
  
-export const Default: Story = {
-    args: {
-      value: 'test',
-      name: 'EMAIL'
-    },
-    render: (args) => {
-      const [value, setValue] = useState(args.value);
-  
-      return (
-        <Input
-          {...args}
-          value={value}
-          onChange={setValue}
-          bgColor="#F0F5FA"
-          
-        />
-      );
-    },
-  };
-  
+export const Icon: Story = {
+  args: {
+    value: 'test',
+    name: 'EMAIL',
+    headerType:'icon',
+    bgColor: "#F0F5FA",
+    placeholder:'example@gmail.com',
+    placeholderColor:'#A0A5BA',
+  },
+  render: (args) => {
+    const [value, setValue] = useState(args.value);
 
-  export const Password: Story = {
-    args: {
-      value: 'test',
-      name: 'PASSWORD',
-      type: 'password'
-    },
-    render: (args) => {
-      const [value, setValue] = useState(args.value);
+    return (
+      <Input
+        {...args}
+        value={value}
+        onChange={setValue}
+      />
+    );
+  },
+};
   
-      return (
-        <Input
-          {...args}
-          value={value}
-          onChange={setValue}
-          bgColor="#F0F5FA"
-          
-        />
-      );
-    },
-  };
+export const Password: Story = {
+  args: {
+    value: 'test',
+    name: 'PASSWORD',
+    headerType:'password',
+    bgColor: "#F0F5FA"
+  },
+  render: (args) => {
+    const [value, setValue] = useState(args.value);
+
+    return (
+      <Input
+        {...args}
+        value={value}
+        onChange={setValue}
+      />
+    );
+  },
+};
+  
+export const Search: Story = {
+  args: {
+    value: 'test',
+    headerType:'search',
+    placeholder:'Search dishes, restaurants',
+    placeholderColor:'#676767',
+    bgColor: '#F6F6F6'
+  },
+  render: (args) => {
+    const [value, setValue] = useState(args.value);
+
+    return (
+      <Input
+        {...args}
+        value={value}
+        onChange={setValue}
+      />
+    );
+  },
+};
   

@@ -3,9 +3,10 @@ import { type SVGProps } from "react";
 import AppleIcon from "./AppleIcon";
 import CardIcon from "./CardIcon";
 import CloseIcon from "./CloseIcon";
-import HiddenIcon from "./HiddenIcon";
 import FacebookIcon from "./FacebookIcon";
+import HiddenIcon from "./HiddenIcon";
 import MenuIcon from "./MenuIcon";
+import SearchIcon from "./SearchIcon";
 import TwitterIcon from "./TwitterIcon";
 
 export const IconComponentMap = {
@@ -15,7 +16,8 @@ export const IconComponentMap = {
     'facebook': FacebookIcon,
     'twitter': TwitterIcon,
     'apple': AppleIcon,
-    'hidden': HiddenIcon
+    'hidden': HiddenIcon,
+    'search': SearchIcon
 }
 interface Props extends IconComponentProps{
     name: keyof typeof IconComponentMap;
