@@ -22,8 +22,8 @@ export default function LoginPage() {
                 <p className={describeLogin}>Please sign in to your existing account</p>
             </div>
             <div className={loginCard}>
-                <Input name ={"EMAIL"} bgColor={"#F0F5FA"} value={email} onChange={setEmail} placeholder="example@gmail.com"/>
-                <Input type = 'password' name ={"PASSWORD"} bgColor={"#F0F5FA"} value={password} onChange={setPassword} placeholder="**********"/>
+                <Input headerType= 'icon' name ={"EMAIL"} bgColor={"#F0F5FA"} value={email} onChange={setEmail} placeholder="example@gmail.com"/>
+                <Input headerType= 'password' type = 'password' name ={"PASSWORD"} bgColor={"#F0F5FA"} value={password} onChange={setPassword} placeholder="**********"/>
                 <div className={loginFooter}>
                     <label className={rememberMe}>
                         <input type="checkbox" color="#7E8A97"/>
