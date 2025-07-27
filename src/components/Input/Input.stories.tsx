@@ -17,7 +17,9 @@ export const Icon: Story = {
     value: 'test',
     name: 'EMAIL',
     headerType:'icon',
-    bgColor: "#F0F5FA"
+    bgColor: "#F0F5FA",
+    placeholder:'example@gmail.com',
+    placeholderColor:'#A0A5BA',
   },
   render: (args) => {
     const [value, setValue] = useState(args.value);
@@ -56,7 +58,9 @@ export const Search: Story = {
   args: {
     value: 'test',
     headerType:'search',
-    placeholder:'Search dishes, restaurants'
+    placeholder:'Search dishes, restaurants',
+    placeholderColor:'#676767',
+    bgColor: '#F6F6F6'
   },
   render: (args) => {
     const [value, setValue] = useState(args.value);

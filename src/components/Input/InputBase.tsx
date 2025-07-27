@@ -33,7 +33,12 @@ function InputBase({onChange,value, placeholder,bgColor,name,type = 'text',leftI
                 type={type}
             className={cx(
                 inputCss,
-                css({ backgroundColor: bgColor }) 
+                css({ 
+                  backgroundColor: bgColor ,
+                  _placeholder: {
+                    color: props.placeholderColor || '#A0AEC0'
+                  }
+                }) 
             )}
             required
             autoComplete="off"

@@ -14,7 +14,6 @@ function InputSearch({ iconName = 'close', ...props }: SearchInputProps) {
 
     return (
         <InputBase 
-            bgColor={'#F6F6F6'}
             leftIcon={
                 <Icon name={'search'} width={20} height={20} className={iconLeftCss}/>
             }

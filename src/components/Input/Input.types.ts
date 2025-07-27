@@ -3,6 +3,8 @@ import { type ReactNode } from "react";
 import { type IconComponentMap } from "../Icon";
 
 export interface InputProps{
+    headerType: 'icon'|'password'|'search';
+
     placeholder?: string;
     value?: string;
     onChange?:(value: string) => void;
@@ -12,7 +14,7 @@ export interface InputProps{
     type?: string;
     leftIcon?: ReactNode;
     rightIcon?: ReactNode;
-    headerType?: 'icon'|'password'|'search';
+    placeholderColor?: string;
 };
 
 export interface IconInputProps extends InputProps {
